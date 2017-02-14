@@ -26,6 +26,7 @@ export class FaceComponent {
   styles: [`
   :host {
     width:90vw;
+    border: 1px solid brown;
   }
   jsr-pile, jsr-face {
     display: inline-block;

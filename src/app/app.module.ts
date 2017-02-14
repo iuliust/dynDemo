@@ -5,13 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DynamicComponent, PileComponent, FaceComponent } from './dynamic/dynamic.component';
+import { LoginViewComponent } from './login-view/login-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicComponent,
     PileComponent,
-    FaceComponent
+    FaceComponent,
+    LoginViewComponent
   ],
   imports: [
     BrowserModule,
