@@ -1,4 +1,12 @@
-import { Component, OnInit, AfterViewInit, ComponentFactoryResolver, ComponentFactory, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component,
+  OnInit,
+  AfterViewInit,
+  ComponentFactoryResolver,
+  ComponentFactory,
+  ViewChild,
+  ViewRef,
+  ViewContainerRef
+} from '@angular/core';
 
 @Component({
   selector: 'jsr-pile',
@@ -36,6 +44,7 @@ export class FaceComponent {
 })
 export class DynamicComponent implements OnInit, AfterViewInit {
   @ViewChild('target', {read: ViewContainerRef}) target: ViewContainerRef;
+  @ViewChild('target') target2: ViewRef;
   pileFactory: ComponentFactory<PileComponent>;
   faceFactory: ComponentFactory<FaceComponent>;
 

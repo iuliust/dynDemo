@@ -1,0 +1,15 @@
+h1 {
+    background-color: lightgrey;
+    margin: 0;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+        }  
+    }
+}

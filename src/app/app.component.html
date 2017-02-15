@@ -1,1 +1,10 @@
-<jsr-dynamic></jsr-dynamic>
+<h1>dynamic components demo app</h1>
+<nav>
+    <ul>
+        <li><a [routerLink]="['']">root</a></li>
+        <li><a [routerLink]="['login']">login</a></li>
+        <li><a [routerLink]="['back-office']">backoffice</a></li>
+        <li><a [routerLink]="['front-office']">frontoffice</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
