@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class TheDonaldPage {
+export class DynDemoPage {
   navigateTo() {
     return browser.get('/');
   }

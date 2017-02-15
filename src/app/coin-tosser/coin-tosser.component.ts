@@ -12,17 +12,13 @@ import { Component,
   selector: 'jsr-pile',
   template: '<span>pile </span>'
 })
-export class PileComponent {
-  constructor() {}
-}
+export class PileComponent {}
 
 @Component({
   selector: 'jsr-face',
   template: '<span>face </span>'
 })
-export class FaceComponent {
-  constructor() {}
-}
+export class FaceComponent {}
 
 @Component({
   selector: 'jsr-coin-tosser',
@@ -31,18 +27,14 @@ export class FaceComponent {
     <div #target></div>
   `,
   styles: [`
-  :host {
-    display: block;
-  }
-  jsr-pile, jsr-face {
-    display: inline-block;
-  }
+    :host { display: block; }
+    jsr-pile, jsr-face { display: inline-block; }
   `],
   entryComponents: [PileComponent, FaceComponent]
 })
 export class CoinTosserComponent implements AfterViewInit {
   @ViewChild('target', {read: ViewContainerRef}) target: ViewContainerRef;
-  @ViewChild('target') target2: ViewRef;
+
   pileFactory: ComponentFactory<PileComponent>;
   faceFactory: ComponentFactory<FaceComponent>;
 

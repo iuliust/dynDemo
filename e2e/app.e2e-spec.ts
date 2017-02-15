@@ -1,10 +1,10 @@
-import { TheDonaldPage } from './app.po';
+import { DynDemoPage } from './app.po';
 
-describe('the-donald App', function() {
-  let page: TheDonaldPage;
+describe('dyn-demo App', function() {
+  let page: DynDemoPage;
 
   beforeEach(() => {
-    page = new TheDonaldPage();
+    page = new DynDemoPage();
   });
 
   it('should display message saying app works', () => {
