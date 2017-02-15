@@ -12,6 +12,7 @@ import { CoinTosserComponent, PileComponent, FaceComponent } from './coin-tosser
 import { LoginViewComponent } from './login-view/login-view.component';
 import { Example1Component } from './example1/example1.component';
 import { Example2Component } from './example2/example2.component';
+import { Example3Component, GreeterComponent } from './example3/example3.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { Example2Component } from './example2/example2.component';
     FaceComponent,
     LoginViewComponent,
     Example1Component,
-    Example2Component
+    Example2Component,
+    Example3Component,
+    GreeterComponent
   ],
   imports: [
     BrowserModule,
