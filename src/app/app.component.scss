@@ -10,6 +10,26 @@ nav {
 
         li {
             display: inline-block;
+
+            a {
+                padding: .4em 1em;
+                background-color: whitesmoke;
+                color: black;
+
+                &:hover {
+                    background-color: lightgrey;
+                }
+            }
         }  
     }
+}
+
+main, nav {
+    width: 760px;
+    margin: auto;
+}
+
+main {
+    background-color: ghostwhite;
+    min-height: 60vh;
 }

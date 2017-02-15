@@ -3,15 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'jsr-index-view',
   template: `
-    <jsr-dynamic></jsr-dynamic>
+    <jsr-coin-tosser></jsr-coin-tosser>
   `,
   styles: []
 })
-export class IndexViewComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class IndexViewComponent { }

@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule, AuthService } from './shared';
 
 import { AppComponent } from './app.component';
-import { DynamicComponent, PileComponent, FaceComponent } from './dynamic/dynamic.component';
+import { CoinTosserComponent, PileComponent, FaceComponent } from './coin-tosser/coin-tosser.component';
 import { LoginViewComponent } from './login-view/login-view.component';
 import { IndexViewComponent } from './index-view/index-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicComponent,
+    CoinTosserComponent,
     PileComponent,
     FaceComponent,
     LoginViewComponent,
@@ -21,11 +23,13 @@ import { IndexViewComponent } from './index-view/index-view.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    SharedModule,
     FormsModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

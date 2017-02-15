@@ -25,16 +25,14 @@ export class FaceComponent {
 }
 
 @Component({
-  selector: 'jsr-dynamic',
+  selector: 'jsr-coin-tosser',
   template: `
-    <h1>I’m a dynamic component</h1>
     <button (click)="tossCoin()">lancer la pièce</button>
     <div #target></div>
   `,
   styles: [`
   :host {
-    width:90vw;
-    border: 1px solid brown;
+    display: block;
   }
   jsr-pile, jsr-face {
     display: inline-block;
@@ -42,16 +40,13 @@ export class FaceComponent {
   `],
   entryComponents: [PileComponent, FaceComponent]
 })
-export class DynamicComponent implements OnInit, AfterViewInit {
+export class CoinTosserComponent implements AfterViewInit {
   @ViewChild('target', {read: ViewContainerRef}) target: ViewContainerRef;
   @ViewChild('target') target2: ViewRef;
   pileFactory: ComponentFactory<PileComponent>;
   faceFactory: ComponentFactory<FaceComponent>;
 
   constructor(private cfr: ComponentFactoryResolver) { }
-
-  ngOnInit() {
-  }
 
   ngAfterViewInit() {
     this.pileFactory = this.cfr.resolveComponentFactory(PileComponent);
