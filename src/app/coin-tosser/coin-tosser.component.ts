@@ -9,21 +9,23 @@ import { Component,
 } from '@angular/core';
 
 @Component({
-  selector: 'jsr-pile',
   template: '<span>pile </span>'
 })
 export class PileComponent {}
 
 @Component({
-  selector: 'jsr-face',
   template: '<span>face </span>'
 })
 export class FaceComponent {}
 
+
+
+
+
 @Component({
   selector: 'jsr-coin-tosser',
   template: `
-    <button (click)="tossCoin()">lancer la pièce</button>
+    <button (click)="tossNTimes(1000)">lancer la pièce</button>
     <div #target></div>
   `,
   styles: [`
@@ -50,6 +52,12 @@ export class CoinTosserComponent implements AfterViewInit {
       this.addPileComponent();
     } else {
       this.addFaceComponent();
+    }
+  }
+
+  tossNTimes(iterations: number) {
+    while (--iterations) {
+      this.tossCoin();
     }
   }
 

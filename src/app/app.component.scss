@@ -7,18 +7,15 @@ nav {
     ul {
         list-style-type: none;
         padding-left: 0;
+        margin: 0;
 
         li {
-            display: inline-block;
+            display: inline-flex;
 
             a {
                 padding: .4em 1em;
-                background-color: whitesmoke;
-                color: black;
-
-                &:hover {
-                    background-color: lightgrey;
-                }
+                background-color: firebrick;
+                color: white;
             }
         }  
     }
