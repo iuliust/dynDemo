@@ -23,10 +23,12 @@ export class LoginViewComponent {
 
   constructor(private auth: AuthService) { }
 
-  authenticate(login: string, password: string) {
-    this.auth.authenticate(login, password)
-      .then(isAuthenticated => this.isAuthenticated = isAuthenticated)
-      .catch(console.error);
+  async authenticate(login: string, password: string) {
+    try {
+      this.isAuthenticated = await this.auth.authenticate(login, password);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
 }
